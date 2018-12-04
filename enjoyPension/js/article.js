@@ -41,15 +41,12 @@
     },
     methods: {
         init: function () {
-            alert(111);
             let self = this;
             $.post('https://api.songfuniaops.com/article/ajax-detail', {
                /* token: 'tAOXebNMDdp5Q3YUiLNXwi31PeAIJQsHZBLW6oOe',*/
                 token: self.articleToken,
                 article_id: self.articleID ,
             }, function (res) {
-                alert(res);
-                console.log(res)
                 if(res.code == 200){
                     if(res.data.type == 1){
                         self.dataType = res.data.type;
