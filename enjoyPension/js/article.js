@@ -1,6 +1,6 @@
 
  let  comment = new Vue({
-    el: '#app',
+    el: '#appapp',
     data: {
         //数据类型
         dataType:null,
@@ -41,6 +41,7 @@
     },
     methods: {
         init: function () {
+            alert(111);
             let self = this;
             $.post('https://api.songfuniaops.com/article/ajax-detail', {
                /* token: 'tAOXebNMDdp5Q3YUiLNXwi31PeAIJQsHZBLW6oOe',*/
