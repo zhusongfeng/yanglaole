@@ -47,7 +47,8 @@
                 token: self.articleToken,
                 article_id: self.articleID ,
             }, function (res) {
-                alert(111,res)
+                alert(res);
+                console.log(res)
                 if(res.code == 200){
                     if(res.data.type == 1){
                         self.dataType = res.data.type;
