@@ -1,6 +1,6 @@
 
  let  comment = new Vue({
-    el: '#appapp',
+    el: '#aaaa',
     data: {
         //数据类型
         dataType:null,
