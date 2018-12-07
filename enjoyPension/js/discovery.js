@@ -147,7 +147,7 @@ var app = new Vue({
         //清除历史记录
         clearHistory: function () {
             localStorage.removeItem('history-discovery');
-            app.historyList = JSON.parse(localStorage.getItem('history-discovery'));
+            // app.historyList = JSON.parse(localStorage.getItem('history-discovery'));
             set.clear();
         },
         //立即搜索
