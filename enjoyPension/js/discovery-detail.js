@@ -1,5 +1,5 @@
 
-    let app = new Vue({
+    var app = new Vue({
             el: '#app',
             data: {
                 isLikeArt:false,
@@ -146,8 +146,8 @@
      */
     $("#upload-img").change(function () {
         app.hideSmile();
-        let reads = new FileReader();
-        let f = document.getElementById('upload-img').files[0];
+        var reads = new FileReader();
+        var f = document.getElementById('upload-img').files[0];
         reads.readAsDataURL(f);
         reads.onload = function (e) {
             app.imgList.push(this.result);
@@ -167,7 +167,7 @@
         app.hideSmile();
     });
     document.querySelector('.emoji-wysiwyg-editor').addEventListener('blur', function () {
-        let elem = $(this);
+        var elem = $(this);
         setTimeout(function () {
             if(app.commentsContent.length == 0 && app.imgList.length == 0) {
                 app.showSmile();
