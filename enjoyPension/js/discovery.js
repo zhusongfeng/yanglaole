@@ -65,7 +65,7 @@ var app = new Vue({
         //手动改变值变化
         tabContentTracker: 0,
         //历史记录
-        historyList: Array.from(set),
+        // historyList: Array.from(set),
         //搜索的关键字
         searchKeys: '',
         //显示的页面标记
@@ -159,8 +159,8 @@ var app = new Vue({
             this.isInput = false;
             if (this.searchKeys.trim() != '') {
                 set.add(this.searchKeys);
-                localStorage.setItem('history-discovery', JSON.stringify(Array.from(set)));
-                app.historyList = Array.from(set);
+                // localStorage.setItem('history-discovery', JSON.stringify(Array.from(set)));
+                // app.historyList = Array.from(set);
             }
         },
         goInner: function (id) {
