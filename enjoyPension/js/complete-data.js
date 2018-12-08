@@ -1,16 +1,16 @@
-window.onload = function () {
+
     /**
      * 引入picker组件
      * @type {HTMLElement}
      */
-    let jsNode = document.createElement('script');
+    var jsNode = document.createElement('script');
     jsNode.src = 'assets/mui/js/mui.picker.min.js';
     jsNode.type = 'text/javascript';
     document.querySelector('head').appendChild(jsNode);
     /**
      * Vue实例化
      */
-    let app = new Vue({
+    var app = new Vue({
         el: '#app',
         data: {
             birthDate: '',
@@ -91,14 +91,14 @@ window.onload = function () {
          * 选择城市
          */
         jsNode.onload = function () {
-            let _getParam = function (obj, param) {
+            var _getParam = function (obj, param) {
                 return obj[param] || '';
             };
-            let cityPicker = new mui.PopPicker({
+            var cityPicker = new mui.PopPicker({
                 layer: 3
             });
             cityPicker.setData(cityData);
-            let showCityPickerButton = document.getElementById('city');
+            var showCityPickerButton = document.getElementById('city');
             showCityPickerButton.addEventListener('tap', function (event) {
                 cityPicker.show(function (items) {
                     showCityPickerButton.value = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
@@ -109,4 +109,3 @@ window.onload = function () {
             }, false);
         };
     })(mui);
-};

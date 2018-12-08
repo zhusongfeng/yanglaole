@@ -1,4 +1,4 @@
-let app = new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         city:'',
@@ -25,7 +25,7 @@ var clipArea = new bjj.PhotoClip("#clipArea", {
     loadStart: function() {
         $("#wait-loading").css("display", "flex");
     },
-    loadComplete: function() {
+    loadCompvare: function() {
         $("#wait-loading").css("display", "none");
         mui('#sheet').popover('toggle');
     },
@@ -62,14 +62,14 @@ function saveImg() {
 /**
  * 城市选择
  */
-let _getParam = function (obj, param) {
+var _getParam = function (obj, param) {
     return obj[param] || '';
 };
-let cityPicker = new mui.PopPicker({
+var cityPicker = new mui.PopPicker({
     layer: 3
 });
 cityPicker.setData(cityData);
-let showCityPickerButton = document.getElementById('city');
+var showCityPickerButton = document.getElementById('city');
 showCityPickerButton.addEventListener('tap', function (event) {
     cityPicker.show(function (items) {
         showCityPickerButton.value = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');

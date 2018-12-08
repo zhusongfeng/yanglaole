@@ -1,5 +1,5 @@
-window.onload = function () {
-    let app = new Vue({
+
+    var app = new Vue({
         el: "#app",
         data: {
             nickname:'默认名称',
@@ -24,4 +24,3 @@ window.onload = function () {
             }
         }
     })
-};
