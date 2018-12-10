@@ -7,23 +7,6 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css"/>
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/home.css"/>
-    <script type="text/javascript">
-        window.onload = function() {
-            isWeixinBrowser();
-        }
-        //判断是否微信浏览器
-        function isWeixinBrowser() {
-            var ua = navigator.userAgent.toLowerCase();
-            var result = (/micromessenger/.test(ua)) ? true : false;
-            if (result) {
-                console.log('你正在访问微信浏览器');
-            }
-            else {
-                console.log('你访问的不是微信浏览器');
-            }
-            return result;
-        }
-    </script>
 </head>
 <body>
 <div id="app">
@@ -154,9 +137,9 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="assets/jquery/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="assets/mui/js/mui.js"></script>
-<script type="text/javascript" src="assets/vue/vue.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 </body>
 </html>
