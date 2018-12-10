@@ -160,7 +160,7 @@ var app = new Vue({
             if (this.searchKeys.trim() != '') {
                 set.add(this.searchKeys);
                 // localStorage.setItem('history-discovery', JSON.stringify(Array.from(set)));
-                app.historyList = Array.from(set);
+                // app.historyList = Array.from(set);
             }
         },
         goInner: function (id) {
