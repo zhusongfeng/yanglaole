@@ -1,4 +1,4 @@
-var set = new Set(JSON.parse(localStorage.getItem('history-discovery')));
+// var set = new Set(JSON.parse(localStorage.getItem('history-discovery')));
 var app = new Vue({
     el: '#app',
     data: {
@@ -146,7 +146,7 @@ var app = new Vue({
         },
         //清除历史记录
         clearHistory: function () {
-            localStorage.removeItem('history-discovery');
+            // localStorage.removeItem('history-discovery');
             // app.historyList = JSON.parse(localStorage.getItem('history-discovery'));
             set.clear();
         },
