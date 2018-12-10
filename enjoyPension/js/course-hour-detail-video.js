@@ -1,5 +1,5 @@
 //vue实例化
-var app = new Vue({
+let app = new Vue({
     el: '#app',
     data: {
         isPlay: false,
@@ -21,8 +21,8 @@ var app = new Vue({
 });
 
 function transformTime(ms) {
-    var minute = parseInt(ms / 60);
-    var seconds = parseInt((ms / 60 - minute) * 60);
+    let minute = parseInt(ms / 60);
+    let seconds = parseInt((ms / 60 - minute) * 60);
     minute = minute < 10 ? `0${minute}` : minute;
     seconds = seconds < 10 ? `0${seconds}` : seconds;
     return `${minute} : ${seconds}`;

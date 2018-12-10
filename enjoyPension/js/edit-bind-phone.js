@@ -1,5 +1,5 @@
-
-    var app = new Vue({
+window.onload = function () {
+    let app = new Vue({
         el: '#app',
         data: {
             sendCodeContent: '获取验证码',
@@ -26,11 +26,11 @@
             //发送验证码
             sendPhoneCode: function () {
                 this.isSend = true;
-                var phoneReg = /^1(3|4|5|7|8)\d{9}$/;
+                let phoneReg = /^1(3|4|5|7|8)\d{9}$/;
                 if (phoneReg.test(this.phone)) {
                     if (this.waitSeconds == 30) {
                         app.sendCodeContent = `${app.waitSeconds}s重新获取`;
-                        var interval = setInterval(function () {
+                        let interval = setInterval(function () {
                             if (app.waitSeconds == 1) {
                                 clearInterval(interval);
                                 app.waitSeconds = 30;
@@ -67,3 +67,4 @@
             }
         }
     })
+};

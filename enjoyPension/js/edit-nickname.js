@@ -1,5 +1,5 @@
-
-    var app = new Vue({
+window.onload = function () {
+    let app = new Vue({
         el: "#app",
         data: {
             nickname:'默认名称',
@@ -24,3 +24,4 @@
             }
         }
     })
+};

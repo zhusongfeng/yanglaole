@@ -1,5 +1,5 @@
-var app = '';
-
+let app = '';
+window.onload = function () {
     app = new Vue({
         el: '#app',
         data: {
@@ -200,8 +200,8 @@ var app = '';
      */
     $("#upload-img").change(function () {
         app.hideSmile();
-        var reads = new FileReader();
-        var f = document.getElementById('upload-img').files[0];
+        let reads = new FileReader();
+        let f = document.getElementById('upload-img').files[0];
         reads.readAsDataURL(f);
         reads.onload = function (e) {
             app.imgList.push(this.result);
@@ -221,7 +221,7 @@ var app = '';
         app.hideSmile();
     });
     document.querySelector('.emoji-wysiwyg-editor').addEventListener('blur', function () {
-        var elem = $(this);
+        let elem = $(this);
         setTimeout(function () {
             if(app.commentsContent.length == 0 && app.imgList.length == 0) {
                 app.showSmile();
@@ -235,3 +235,4 @@ var app = '';
     document.querySelector('.emoji-wysiwyg-editor').addEventListener('input', function () {
         app.commentsContent = $(this).text();
     });
+};

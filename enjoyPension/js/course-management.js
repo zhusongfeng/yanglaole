@@ -1,5 +1,5 @@
-
-    var app = new Vue({
+window.onload = function () {
+    let app = new Vue({
         el: '#app',
         data: {},
         methods: {
@@ -20,3 +20,4 @@
             },
         }
     });
+}

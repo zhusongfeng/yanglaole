@@ -1,5 +1,5 @@
-
-    var app = new Vue({
+window.onload = function () {
+    let app = new Vue({
             el: '#app',
             data: {
                 commentsContent: '',
@@ -38,8 +38,8 @@
      * 监听文件上传框变化
      */
     $("#upload-img").change(function () {
-        var reads = new FileReader();
-        var f = document.getElementById('upload-img').files[0];
+        let reads = new FileReader();
+        let f = document.getElementById('upload-img').files[0];
         reads.readAsDataURL(f);
         reads.onload = function (e) {
             app.imgList.push(this.result);
@@ -59,3 +59,4 @@
     document.querySelector('.emoji-wysiwyg-editor').addEventListener('input', function () {
         app.commentsContent = $(this).text();
     });
+};

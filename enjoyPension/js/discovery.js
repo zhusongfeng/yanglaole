@@ -1,5 +1,5 @@
-// var set = new Set(JSON.parse(localStorage.getItem('history-discovery')));
-var app = new Vue({
+let set = new Set(JSON.parse(localStorage.getItem('history-discovery')));
+let app = new Vue({
     el: '#app',
     data: {
         //选中的选项卡
@@ -65,7 +65,7 @@ var app = new Vue({
         //手动改变值变化
         tabContentTracker: 0,
         //历史记录
-        // historyList: Array.from(set),
+        historyList: Array.from(set),
         //搜索的关键字
         searchKeys: '',
         //显示的页面标记
@@ -79,13 +79,13 @@ var app = new Vue({
             this.getItemList(tabId);
         },
         getItemList: function (tabId) {
-            var vm = this;
+            let vm = this;
             if (vm.tabContent.get(tabId)) {
                 return vm.tabContent.get(tabId);
             }
             else {
                 //请求获取数据
-                var list = [
+                let list = [
                     {
                         "id": 0,
                         "type": 0,
@@ -146,8 +146,8 @@ var app = new Vue({
         },
         //清除历史记录
         clearHistory: function () {
-            // localStorage.removeItem('history-discovery');
-            // app.historyList = JSON.parse(localStorage.getItem('history-discovery'));
+            localStorage.removeItem('history-discovery');
+            app.historyList = JSON.parse(localStorage.getItem('history-discovery'));
             set.clear();
         },
         //立即搜索
@@ -159,8 +159,8 @@ var app = new Vue({
             this.isInput = false;
             if (this.searchKeys.trim() != '') {
                 set.add(this.searchKeys);
-                // localStorage.setItem('history-discovery', JSON.stringify(Array.from(set)));
-                // app.historyList = Array.from(set);
+                localStorage.setItem('history-discovery', JSON.stringify(Array.from(set)));
+                app.historyList = Array.from(set);
             }
         },
         goInner: function (id) {
@@ -183,11 +183,11 @@ var app = new Vue({
  * 固定tab
  */
     //获取 id="course_container" 元素，offsetTop是当前元素·距离网页窗口顶部的距离
-var offset_top = document.getElementById("tab-container").offsetTop;
-var isSetHeight = false;
+let offset_top = document.getElementById("tab-container").offsetTop;
+let isSetHeight = false;
 $(window).scroll(function () {
     //获取垂直滚动的距离（scrollTop()是从顶部开始滚动产生的距离）
-    var scroll_top = $(document).scrollTop();
+    let scroll_top = $(document).scrollTop();
     //防止重复设置高度页面抖动
     if (scroll_top > offset_top) {
         // 到达顶部位置，动态的添加元素属性，并给元素添加相应的元素样式
@@ -198,7 +198,7 @@ $(window).scroll(function () {
         document.getElementById("tab-container").classList.remove("fixed");
     }
 });
-var slider = mui("#slider");
+let slider = mui("#slider");
 slider.slider({
     interval: 2000
 });
