@@ -1,4 +1,4 @@
-var set = new Set(JSON.parse(localStorage.getItem('history-home')));
+// var set = new Set(JSON.parse(localStorage.getItem('history-home')));
 var app = new Vue({
     el: '#app',
     data: {
@@ -67,7 +67,7 @@ var app = new Vue({
         //手动改变值变化
         tabContentTracker: 0,
         //历史记录
-        historyList: Array.from(set),
+        historyList: '',
         //搜索的关键字
         searchKeys: '',
         //显示的页面标记
@@ -153,8 +153,8 @@ var app = new Vue({
         },
         //清除历史记录
         clearHistory: function () {
-            localStorage.removeItem('history-home');
-            app.historyList = JSON.parse(localStorage.getItem('history-home'));
+            // localStorage.removeItem('history-home');
+            // app.historyList = JSON.parse(localStorage.getItem('history-home'));
             set.clear();
         },
         //立即搜索
@@ -166,8 +166,8 @@ var app = new Vue({
             this.isInput = false;
             if (this.searchKeys.trim() != '') {
                 set.add(this.searchKeys);
-                localStorage.setItem('history-home', JSON.stringify(Array.from(set)));
-                app.historyList = Array.from(set);
+                // localStorage.setItem('history-home', JSON.stringify(Array.from(set)));
+                // app.historyList = Array.from(set);
             }
         },
         //显示历史记录
