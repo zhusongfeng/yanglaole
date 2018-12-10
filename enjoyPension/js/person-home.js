@@ -1,4 +1,4 @@
-let app = new Vue({
+var app = new Vue({
     el: '#app',
     data: {},
     methods: {
@@ -21,6 +21,6 @@ let app = new Vue({
     }
 });
 
-mui('nav').on('tap','a.mui-tab-item',function () {
-   $(this).click();
+mui('nav').on('tap', 'a.mui-tab-item', function () {
+    $(this).click();
 });

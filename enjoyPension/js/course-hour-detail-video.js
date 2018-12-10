@@ -1,5 +1,5 @@
 //vue实例化
-let app = new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         isPlay: false,
@@ -8,21 +8,21 @@ let app = new Vue({
         videoPlayer: ''
     },
     methods: {
-        goCourse:function (id) {
+        goCourse: function (id) {
             //进入课程
             mui.openWindow({
-                url:'course-detail.html?id='+id
+                url: 'course-detail.html?id=' + id
             })
         },
-        goBack:function () {
+        goBack: function () {
             history.go(-1);
         }
     }
 });
 
 function transformTime(ms) {
-    let minute = parseInt(ms / 60);
-    let seconds = parseInt((ms / 60 - minute) * 60);
+    var minute = parseInt(ms / 60);
+    var seconds = parseInt((ms / 60 - minute) * 60);
     minute = minute < 10 ? `0${minute}` : minute;
     seconds = seconds < 10 ? `0${seconds}` : seconds;
     return `${minute} : ${seconds}`;
