@@ -67,8 +67,7 @@ var app = new Vue({
         //手动改变值变化
         tabContentTracker: 0,
         //历史记录
-        // historyList: Array.from(set),
-        // historyList: Array.from(set),
+        historyList: Array.from(set),
         //搜索的关键字
         searchKeys: '',
         //显示的页面标记

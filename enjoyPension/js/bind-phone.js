@@ -7,11 +7,11 @@ var app = new Vue({
         code: '',
         serverCode: '',
         waitSeconds: 60,
-        clearCode:false,
-        clearPhone:false
+        clearCode: false,
+        clearPhone: false
     },
     methods: {
-        test:function() {
+        test: function () {
             alert(666);
         },
         //验证手机号为11位
@@ -45,8 +45,8 @@ var app = new Vue({
             }
         },
         //确认绑定
-        goBindPhone:function () {
-            if(app.hasCode) {
+        goBindPhone: function () {
+            if (app.hasCode) {
                 mui.toast('绑定了');
             }
             else {
@@ -54,7 +54,7 @@ var app = new Vue({
             }
         },
         //跳过绑定
-        skipBindPhone:function () {
+        skipBindPhone: function () {
             mui.toast('跳过')
         },
         clearCodeFun: function () {
@@ -76,7 +76,7 @@ var app = new Vue({
                 //隐藏清空按钮
                 app.clearPhone = false;
             }
-            if(newPhone.length == 11 && app.code.length == 6) {
+            if (newPhone.length == 11 && app.code.length == 6) {
                 app.hasCode = true;
             }
             else {
@@ -92,7 +92,7 @@ var app = new Vue({
                 //隐藏清空按钮
                 app.clearCode = false;
             }
-            if(newCode.length == 6 && app.phone.length == 11) {
+            if (newCode.length == 6 && app.phone.length == 11) {
                 app.hasCode = true;
             }
             else {
@@ -101,3 +101,4 @@ var app = new Vue({
         }
     }
 });
+
